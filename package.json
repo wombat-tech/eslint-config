@@ -1,0 +1,27 @@
+{
+  "name": "@spielworksdev/eslint-config",
+  "version": "1.0.0",
+  "description": "ESlint rules",
+  "main": "index.js",
+  "scripts": {
+    "test": "eslint -c index.js --env es6,node --max-warnings 0 index.js"
+  },
+  "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.39.0",
+    "@typescript-eslint/parser": "^5.39.0",
+    "eslint": ">= 8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wombat-tech/eslint-config"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig"
+  ],
+  "author": "Spielworks GmbH <dev@spielworks.com>",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "eslint": "^8.24.0"
+  }
+}
