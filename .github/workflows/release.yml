@@ -1,7 +1,7 @@
 name: Release
 on: workflow_dispatch
 jobs:
-  RunChecks:
+  Release:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -30,5 +30,6 @@ jobs:
 
       - name: Publish the package
         env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          # See https://docs.github.com/en/actions/publishing-packages/publishing-nodejs-packages#publishing-packages-to-the-npm-registry
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npm publish
