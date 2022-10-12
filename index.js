@@ -2,6 +2,7 @@ const WARN = 'warn'
 const ERROR = 'error'
 const NEVER = 'never'
 const ALWAYS = 'always'
+const OFF = 'off'
 
 const config = {
   root: true,
@@ -16,20 +17,23 @@ const config = {
   ],
   rules: {
     semi: [WARN, NEVER],
-    'jsx-quotes': [WARN, 'prefer-double'],
-    'comma-dangle': [WARN, 'always-multiline'],
+    'jsx-quotes': [WARN, 'prefer-single'],
     quotes: [WARN, 'single'],
 
     'max-len': [
-      WARN, 80, 2, {
+      WARN, 100, 2, {
         ignoreUrls: true,
         ignoreComments: false,
         ignoreRegExpLiterals: true,
         ignoreTemplateLiterals: true,
-        ignoreStrings: true,
-      },
+        ignoreStrings: true
+      }
     ],
     indent: [WARN, 2, { SwitchCase: 1, flatTernaryExpressions: true }],
+
+    // Empty blocks
+    'no-empty-function': OFF,
+    '@typescript-eslint/no-empty-function': OFF,
 
     // Spaces
     'func-call-spacing': [WARN, NEVER],
@@ -54,13 +58,16 @@ const config = {
     'one-var': [ERROR, NEVER],
     'no-whitespace-before-property': ERROR,
 
+    // Rules unneeded by us
+    'no-prototype-builtins': OFF,
+
     // Typescript specific
     '@typescript-eslint/naming-convention': [
       WARN,
       { selector: 'enum', format: ['PascalCase'] },
-      { selector: 'enumMember', format: ['UPPER_CASE'] },
-    ],
-  },
+      { selector: 'enumMember', format: ['UPPER_CASE'] }
+    ]
+  }
 }
 
 module.exports = config

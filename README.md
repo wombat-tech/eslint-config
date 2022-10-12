@@ -24,6 +24,29 @@ extends:
 
 This will make the config usable in any NPM script running the linter.
 
+### Environments
+
+You might need to set the `env` key as well depending on your project.
+
+```yaml
+env:
+  node: true
+  browser: true
+```
+
+If your project has multiple environments, multiple `.eslintrc.yml` files might be necessary.
+This could be the case for CDK and tests.
+
+#### CDK
+
+If your project uses CDK and is not otherwise a Node.js project, add a file `cdk/.eslintrc.yml`
+with the content
+
+```yaml
+env:
+  node: true
+```
+
 ## Development of the config
 
 While working on the shared config itself it is useful to work
