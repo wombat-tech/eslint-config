@@ -1,6 +1,7 @@
 # Ignore everything except the README, index and package files
 *
 !index.js
+!javascript.js
 !package.json
 !package-lock.json
 !README.md

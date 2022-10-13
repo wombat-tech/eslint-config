@@ -14,7 +14,7 @@ eslint):
 npm install --save-dev eslint @spielworksdev/eslint-config
 ```
 
-Then write a config file:
+Then write a config file (for Typescript projects):
 
 ```yaml
 # .eslintrc.yml
@@ -23,6 +23,14 @@ extends:
 ```
 
 This will make the config usable in any NPM script running the linter.
+
+If the project is a Javascript project, use
+
+```yaml
+# .eslintrc.yml
+extends:
+  - '@spielworksdev/eslint-config/javascript'
+```
 
 ### Environments
 
