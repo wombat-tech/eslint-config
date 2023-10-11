@@ -4,6 +4,7 @@ const WARN = 'warn'
 const ERROR = 'error'
 const NEVER = 'never'
 const ALWAYS = 'always'
+const ALWAYS_MULTILINE = 'always-multiline'
 const OFF = 'off'
 
 const config = {
@@ -54,6 +55,9 @@ const config = {
     'no-fallthrough': ERROR,
     'one-var': [ERROR, NEVER],
     'no-whitespace-before-property': ERROR,
+
+    // Trailing commas
+    'comma-dangle': [WARN, ALWAYS_MULTILINE],
 
     // Rules unneeded by us
     'no-prototype-builtins': OFF

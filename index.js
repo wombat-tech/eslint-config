@@ -25,9 +25,9 @@ const config = {
     '@typescript-eslint/naming-convention': [
       WARN,
       { selector: 'enum', format: ['PascalCase'] },
-      { selector: 'enumMember', format: ['UPPER_CASE'] }
-    ]
-  }
+      { selector: 'enumMember', format: ['UPPER_CASE'] },
+    ],
+  },
 }
 
 module.exports = config
